@@ -58,7 +58,7 @@ export default function Navbar() {
     return (
         <div className='navbar'>
             <div class="back-to-homepage">
-                <img src='./public/logo.webp'/>
+                <img src='./public/logo.jpg'/>
                 <Link to="/" >Home</Link>
             </div>
             <div>{logCondition}</div>
