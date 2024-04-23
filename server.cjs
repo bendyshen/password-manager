@@ -1,6 +1,7 @@
 const express = require('express');
-const pokemon = require('./backend/pokemon.api.cjs');
+const password = require('./backend/password.api.cjs');
 const users = require('./backend/user.api.cjs')
+const share = require('./backend/share.api.cjs')
 const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser')
 const path = require('path')
@@ -8,12 +9,12 @@ const path = require('path')
 const app = express();
 
 
-// const mongoDBEndpoint = 'mongodb+srv://hunter:___@seawebdevfall2021.ykjok.mongodb.net/?retryWrites=true&w=majority&appName=SeaWebDevFall2021'
-// mongoose.connect(mongoDBEndpoint, {
-//     useNewUrlParser: true,
-// })
+const mongoDBEndpoint = 'mongodb+srv://yuanshen:7895123a@webdev.f4kp8kb.mongodb.net/?retryWrites=true&w=majority&appName=WebDev'
+mongoose.connect(mongoDBEndpoint, {
+    useNewUrlParser: true,
+})
 
-// const db = mongoose.connection;
+const db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'Error connecting to MongoDB:'));
 
@@ -21,9 +22,9 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use('/api/pokemon', pokemon);
+app.use('/api/password', password);
 app.use('/api/users', users);
-
+app.use('/api/share', share)
 // app.get('/', function(req, res) {
 //     res.send("This is the FIRST GET request")
 // });

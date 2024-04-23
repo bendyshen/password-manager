@@ -1,0 +1,30 @@
+
+.product-description {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.product-description {
+    color: #333;
+    line-height: 1.6;
+    margin-top: 20px;
+    padding: 0 15px;
+}
+
+.product-description h2 {
+    text-align: center;
+}
+
+.product-description p {
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+.creators span{
+    font-weight: bold;
+    color: black
+}
+
+ul{
+    list-style-type: none;
+}
